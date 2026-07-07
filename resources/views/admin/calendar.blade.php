@@ -34,7 +34,8 @@
                 height: 'auto',
                 events: "{{ route('admin.calendar.events') }}",
                 eventDidMount: function (info) {
-                    info.el.title = `${info.event.title} — ${info.event.extendedProps.status}`;
+                    const notes = info.event.extendedProps.notes;
+                    info.el.title = `${info.event.title} — ${info.event.extendedProps.status}` + (notes ? `\nNotes: ${notes}` : '');
                 },
             });
 

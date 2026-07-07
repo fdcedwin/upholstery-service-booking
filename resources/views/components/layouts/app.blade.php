@@ -18,7 +18,7 @@
                         <path d="M3 12h18M3 12a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2M3 12v6a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-6M7 10V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
                     </svg>
                 </span>
-                <span class="text-lg font-bold tracking-tight text-gray-900">StitchCraft Upholstery</span>
+                <span class="text-lg font-bold tracking-tight text-gray-900">Sample Craft Upholstery</span>
             </a>
             <a href="{{ route('login') }}" class="text-sm font-medium text-gray-500 hover:text-primary-600 transition">Admin login</a>
         </div>
@@ -29,7 +29,7 @@
     </main>
 
     <footer class="mx-auto max-w-5xl px-4 pb-10 text-center text-xs text-gray-400 sm:px-6">
-        &copy; {{ date('Y') }} StitchCraft Upholstery. All rights reserved.
+        &copy; {{ date('Y') }} Sample Craft Upholstery. All rights reserved.
     </footer>
 
     <x-toast />

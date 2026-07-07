@@ -73,6 +73,7 @@
                             <th class="whitespace-nowrap px-5 py-3 font-semibold text-gray-500">Customer</th>
                             <th class="whitespace-nowrap px-5 py-3 font-semibold text-gray-500">Service</th>
                             <th class="whitespace-nowrap px-5 py-3 font-semibold text-gray-500">Date &amp; time</th>
+                            <th class="px-5 py-3 font-semibold text-gray-500">Notes</th>
                             <th class="whitespace-nowrap px-5 py-3 font-semibold text-gray-500">Status</th>
                             <th class="whitespace-nowrap px-5 py-3 font-semibold text-gray-500 text-right">Actions</th>
                         </tr>
@@ -89,6 +90,22 @@
                                     {{ $booking->booking_date->format('M d, Y') }}
                                     <span class="text-gray-400">&middot;</span>
                                     {{ \Illuminate\Support\Carbon::parse($booking->booking_time)->format('g:i A') }}
+                                </td>
+                                <td class="max-w-xs px-5 py-4">
+                                    @if ($booking->notes)
+                                        <div x-data="{ expanded: false }">
+                                            <p :class="expanded ? '' : 'line-clamp-2'" class="text-gray-600">
+                                                {{ $booking->notes }}
+                                            </p>
+                                            @if (strlen($booking->notes) > 80)
+                                                <button type="button" @click="expanded = !expanded" class="mt-1 text-xs font-medium text-primary-600 hover:underline">
+                                                    <span x-text="expanded ? 'Show less' : 'Show more'"></span>
+                                                </button>
+                                            @endif
+                                        </div>
+                                    @else
+                                        <span class="text-gray-300">&mdash;</span>
+                                    @endif
                                 </td>
                                 <td class="whitespace-nowrap px-5 py-4">
                                     <x-status-badge :status="$booking->status" />

@@ -25,7 +25,7 @@
                     <path d="M3 12h18M3 12a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2M3 12v6a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-6M7 10V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
                 </svg>
             </span>
-            <span class="text-base font-bold tracking-tight">StitchCraft</span>
+            <span class="text-base font-bold tracking-tight">Sample Craft Upholstery</span>
         </div>
 
         <nav class="mt-4 flex-1 space-y-1 px-3">
